@@ -1,0 +1,129 @@
+/* estilo al body */
+body {
+    background-color: #0f172a;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* estilo al contenedor del titulo */
+header {
+    text-align: center;
+    padding: 1rem;
+}
+
+/* contenedor padre */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+/* estilo a las cartas*/
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px !important;
+    transition: transform 0.3s ease;
+}
+
+/* pasar el cursor por encima de una carta */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* estilo precio */
+.precio {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.precio span {
+    font-size: 1rem;
+    color: #94a3b8;
+}
+
+/* estilo a las caracteristicas de cada plan */
+.caracteristicas {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+    width: 100%;
+}
+.caracteristicas li {
+    margin-bottom: 10px;
+}
+.caracteristicas i {
+    color: #10d949;
+    margin-right: 10px;
+}
+
+.box {
+    background-color: #1e293b;
+    min-height: 100px;
+}
+
+/* borde abstracto (adaptado a la carta) */
+.border-radius-fancy {
+    border: 3px solid #6366f1;
+    border-radius: 30% 70% 70% 30% / 10% 10% 10% 10%;
+    background: #1e293b;
+}
+
+/* borde animado */
+.animated-border {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    border-radius: 20px;
+}
+.animated-border::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent, #6366f1, #ec4899, transparent 30%);
+    animation: rotate 4s linear infinite;
+    z-index: -2;
+}
+.animated-border::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: #1e293b;
+    border-radius: 17px;
+    z-index: -1;
+}
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* borde de cristal */
+.clip-border {
+    border: 4px solid transparent;
+    background: 
+        linear-gradient(#1e293b, #1e293b) padding-box, 
+        linear-gradient(to bottom right, #db3611, #10d949) border-box;
+    border-radius: 20px;
+}
+
+/* estilo a los botones de cada tarjeta */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #334155;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}

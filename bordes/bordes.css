@@ -1,0 +1,168 @@
+/* estilo al body */
+body {
+    background-color: #0f172a;
+    color: white;
+    font-family: system-ui, sans-serif;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/* estilo al contenedor del titulo y redireccion al ejemplo */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+/* estilo a la redireccion */
+a{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+/* estructura al contenedor que contiene todos los bordes */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* estilo básico a las cajas (sin bordes) */
+.box {
+    background: #1e293b;
+    padding: 20px;
+    text-align: center;
+    min-height: 100px;
+}
+
+/* borde solido */
+.solid-border{
+    border: 5px solid white;
+}
+
+/* borde discontinuo */
+.dashed-border{
+    border: 5px dashed yellow;
+}
+
+/* borde de puntos */
+.dotted-border{
+    border: 5px dotted blue;
+}
+
+/* borde doble */
+.double-border{
+    border: 5px double orange;
+}
+
+/* borde con hendidura */
+.groove-border{
+    border: 5px groove purple;
+}
+
+/* borde similar a 3D */
+.ridge-border{
+    border: 5px ridge pink;
+}
+
+/* borde arriba e izquierda oscuro*/
+.inset-border{
+    border: 5px inset green;
+}
+
+/* borde abajo y derecha oscuro */
+.outset-border{
+    border: 5px outset red;
+}
+
+/* borde con degradado */
+.gradient-border {
+    border-radius: 12px;
+    border: 8px solid;
+    border-image: linear-gradient(to right, #6366f1, #ec4899) 1;
+}
+
+/* borde de cristal */
+.clip-border {
+    border-radius: 12px;
+    border: 4px solid transparent;
+    background: 
+        linear-gradient(#1e293b, #1e293b) padding-box, 
+        linear-gradient(to right, #db3611, #10d949) border-box;
+    border-radius: 20px;
+}
+
+/* borde abstracto */
+.border-radius-fancy {
+    border-radius: 12px;
+    border: 5px solid #eb1717;
+    border-radius: 30% 70% 70% 30% / 67% 62% 38% 33%;
+    background: #1e293b;
+}
+
+/* borde animado */
+.animated-border {
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+.animated-border::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent, #d81a40, transparent 30%);
+    animation: rotate 4s linear infinite;
+    z-index: -1;
+}
+.animated-border::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background: #1e293b;
+    border-radius: 8px;
+    z-index: -1;
+}
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* forma de estrella */
+.estrella {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1fr;
+    height: 1fr;
+    background-color: rgb(14, 194, 50);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* forma de triángulo */
+.triangulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1fr;
+    height: 1fr;
+    background-color: rgb(201, 12, 56);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); 
+}
+
+/* forma de cruz */
+.cruz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1fr;
+    height: 1fr;
+    background-color: rgb(149, 21, 224);
+    clip-path: polygon(35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%, 0% 35%, 35% 35%);
+}

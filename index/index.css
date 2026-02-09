@@ -20,7 +20,7 @@ body {
     border-radius: 15px;
     text-align: center;
     max-width: 400px;
-    background-color: light-dark(#ffffff, #1e1e1e);
+    background-color: light-dark(#f1f0f0, #1e1e1e);
     color: light-dark(#121212, #ffffff);
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }

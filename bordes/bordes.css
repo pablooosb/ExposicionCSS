@@ -133,36 +133,3 @@ a{
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
-
-/* forma de estrella */
-.estrella {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1fr;
-    height: 1fr;
-    background-color: rgb(14, 194, 50);
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-}
-
-/* forma de triángulo */
-.triangulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1fr;
-    height: 1fr;
-    background-color: rgb(201, 12, 56);
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); 
-}
-
-/* forma de cruz */
-.cruz {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1fr;
-    height: 1fr;
-    background-color: rgb(149, 21, 224);
-    clip-path: polygon(35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%, 0% 35%, 35% 35%);
-}
